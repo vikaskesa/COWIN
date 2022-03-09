@@ -18,7 +18,7 @@ public class AppointmentService {
 	@HystrixCommand(fallbackMethod = "AppointmentServiceFallBack")
 	public Appointment getAppointmentDetails(int appointmentId) {
 
-		String resourceUrl = "https://localhost:8081/ecom/product/get" + appointmentId;
+		String resourceUrl = "http://appointmentservice/appointmentservice/appointment/get" + appointmentId;
 
 		Appointment Appointment = restTemplate.getForObject(resourceUrl, Appointment.class);
 

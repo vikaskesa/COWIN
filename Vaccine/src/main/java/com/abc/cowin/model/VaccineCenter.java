@@ -1,7 +1,5 @@
 package com.abc.cowin.model;
 
-import java.time.LocalDate;
-
 public class VaccineCenter {
 	
 	private int centerId;

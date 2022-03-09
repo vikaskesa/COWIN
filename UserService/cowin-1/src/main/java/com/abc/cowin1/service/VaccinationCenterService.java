@@ -16,7 +16,7 @@ public class VaccinationCenterService {
 	@HystrixCommand(fallbackMethod = "VaccinationCenterServiceFallBack")
 	public VaccinationCenter getVaccinationCenterDetails(int centerId) {
 
-		String resourceUrl = "https://localhost:8081/ecom/product/get" + centerId;
+		String resourceUrl = "http://vaccination-center-service/vaccine/vaccine/pincode/" + centerId;
 
 		VaccinationCenter VaccinationCenter = restTemplate.getForObject(resourceUrl, VaccinationCenter.class);
 
